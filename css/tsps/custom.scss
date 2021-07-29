@@ -1,0 +1,86 @@
+@import url('colors.css');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Reenie+Beanie&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+:root{
+    --primaryColor:#203fa5;
+    --primaryColorHover:#1b3280;
+}
+
+
+.btn-link{
+    background: var(--primaryColor);
+    color:#fff;
+
+    &:hover{
+        background: var(--primaryColorHover); 
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+
+.levels{
+    padding: 2rem 0;
+}
+
+.whyUs{
+    background: #d8d8d8;
+    padding: 3rem 0;
+
+   
+
+    .iconBox{
+        background: #ffffff;
+        text-align: center;
+        padding: 2rem 1.2rem;
+        display: flex;
+        // flex-direction: column;
+        // height: 210px;
+        box-shadow: 2px 3px 28px -5px rgba(0, 0, 0, 0.295);
+        border-radius: 4px;
+        transition: 0.4s;
+        &:hover{
+            box-shadow: 2px 3px 28px -5px rgba(0, 0, 0, 0.541); 
+        }
+
+        h4{
+            margin-top: 0.8rem;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-left: 2px;
+        }
+
+        .icon{
+            color: var(--primaryColor);
+            font-size: 3rem;
+
+        }
+    }
+}
+.card
+{
+    box-shadow: 2px 3px 28px -5px rgba(48, 48, 48, 0.541);  
+}
+
+.aboutTsps{
+    background:var(--primaryColor);
+    padding: 2rem 0;
+    color: #fff;
+}
+.announcements{
+    .announcement{
+        border-bottom: 1px solid #cccccc;
+        padding: 0.5rem 0;
+    }
+    p{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .iconBox,.card{
+        margin-bottom: 1.5rem;
+    }
+}
