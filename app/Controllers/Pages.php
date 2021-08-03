@@ -18,7 +18,7 @@ class Pages extends BaseController
         $this->gallery = new GalleryModel();
         $this->joiningInstruction = new JoiningInstruction();
 
-        helper(['date', 'form']);
+        helper(['date', 'form', 'image']);
     }
     public function aboutUs()
     {

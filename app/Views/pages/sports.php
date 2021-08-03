@@ -1,6 +1,7 @@
-<?=$this->extend('layouts/coreLayout') ?>
-<?=$this->section('content') ?>
-<section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="assets/images/sports3.jpg">
+<?=$this->extend('layouts/coreLayout')?>
+<?=$this->section('content')?>
+<section class="inner-header divider parallax layer-overlay overlay-dark-5"
+    data-bg-img="assets/images/sports/IMG_9504.jpg">
     <div class="container pt-100 pb-100">
         <!-- Section Content -->
         <div class="section-content">
@@ -115,16 +116,16 @@
             </div>
 
             <div class="col-md-4  wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s">
-                <img class="aboutImage " src="<?=base_url()?>/assets/images/sps/footBall.jpg" alt="">
+                <img class="aboutImage " src="<?=base_url()?>/assets/images/sports/IMG_9440.jpg" alt="">
             </div>
             <div class="col-md-4">
-                <img class="aboutImage " src="<?=base_url()?>/assets/images/sps/basket.jpg" alt="">
+                <img class="aboutImage " src="<?=base_url()?>/assets/images/sports/IMG_9504.jpg" alt="">
             </div>
             <div class="col-md-4">
-                <img class="aboutImage " src="<?=base_url()?>/assets/images/sps/vollayBall1.jpg" alt="">
+                <img class="aboutImage " src="<?=base_url()?>/assets/images/sports/IMG_9434.jpg" alt="">
             </div>
 
         </div>
     </div>
 </section>
-<?=$this->endSection() ?>
+<?=$this->endSection()?>

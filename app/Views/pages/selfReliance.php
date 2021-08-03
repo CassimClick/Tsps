@@ -1,13 +1,13 @@
-<?=$this->extend('layouts/coreLayout') ?>
-<?=$this->section('content') ?>
+<?=$this->extend('layouts/coreLayout')?>
+<?=$this->section('content')?>
 <section class="inner-header divider parallax layer-overlay overlay-dark-5"
-    data-bg-img="<?=base_url()?>/assets/images/farm/Tomato.jpg">
-    <div class="container pt-70 pb-20">
+    data-bg-img="<?=base_url()?>/assets/images/farm/0L9A5281.jpg">
+    <div class="container pt-70 pb-150">
         <!-- Section Content -->
         <div class="section-content">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="title text-white text-center"><?=ucfirst($page['title'] )?></h2>
+                    <h2 class="title text-white text-center"><?=ucfirst($page['title'])?></h2>
                     <ol class="breadcrumb text-left text-black mt-10">
                         <li><a class="text-white" href="<?=base_url()?>">Home</a></li>
 
@@ -36,7 +36,7 @@
                     maize, beans, including highly-priced crops like capsicum, lettuce, cucumber, which are among major
                     cash crops. The farm also has two ﬁsh ponds - which measure 15 by 30 meters - each of which can
                     accommodate more than 4000 ﬁsh that are able to mature within 7 months. The advantage of greenhouse
-                    farming over traditional farming is that in a greenhouseone one can have crops all year round. And
+                    farming over traditional farming is that in a greenhouse one can have crops all year round. And
                     obviously, when you harvest your crops out of season they are likely to command high prices.
 
                     Needless to say, an investment in establishing a school farm can result in a signiﬁcant saving in
@@ -92,7 +92,7 @@
 
             </div>
             <div class="col-md-6">
-                <img class="aboutImage1" src="assets/images/farm/Greenhouse2.jpg" alt="">
+                <img class="aboutImage1" src="assets/images/farm/0L9A5273.jpg" alt="">
             </div>
         </div>
         <hr>
@@ -139,16 +139,16 @@
             </div>
 
             <div class="col-md-4">
-                <img class="aboutImage" src="<?=base_url()?>/assets/images/farm/garden.jpg" alt="">
+                <img class="aboutImage" src="<?=base_url()?>/assets/images/farm/0L9A5225.jpg" alt="">
             </div>
             <div class="col-md-4">
-                <img class="aboutImage" src="<?=base_url()?>/assets/images/farm/Tomato.jpg" alt="">
+                <img class="aboutImage" src="<?=base_url()?>/assets/images/farm/0L9A5227.jpg" alt="">
             </div>
             <div class="col-md-4">
-                <img class="aboutImage" src="<?=base_url()?>/assets/images/farm/vegetables.jpg" alt="">
+                <img class="aboutImage" src="<?=base_url()?>/assets/images/farm/0L9A5195.jpg" alt="">
             </div>
 
         </div>
     </div>
 </section>
-<?=$this->endSection() ?>
+<?=$this->endSection()?>

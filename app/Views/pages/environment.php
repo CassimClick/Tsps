@@ -1,5 +1,5 @@
-<?=$this->extend('layouts/coreLayout') ?>
-<?=$this->section('content') ?>
+<?=$this->extend('layouts/coreLayout')?>
+<?=$this->section('content')?>
 <section class="inner-header divider parallax layer-overlay overlay-dark-5"
     data-bg-img="assets/images/slider/eventImg.jpg">
     <div class="container pt-100 pb-100">
@@ -7,7 +7,7 @@
         <div class="section-content">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="title text-white text-center"><?=$page['title'] ?></h2>
+                    <h2 class="title text-white text-center"><?=$page['title']?></h2>
                     <ol class="breadcrumb text-left text-black mt-10">
                         <li><a class="text-white" href="<?=base_url()?>">Home</a></li>
 
@@ -35,7 +35,7 @@
 
             <div class="col-md-6">
                 <div class="card text-white bg-primary">
-                    <img class="card-img-top" src="<?=base_url()?>/assets/images/sps/pre.jpg" alt=""
+                    <img class="card-img-top" src="<?=base_url()?>/assets/images/0L9A5708.jpg" alt=""
                         style="height:300px;object-fit:cover;width:100%">
                     <div class="card-body" style="height:auto">
                         <h4 class="card-title">Classrooms</h4>
@@ -48,7 +48,7 @@
             </div>
             <div class="col-md-6">
                 <div class="card text-white bg-primary">
-                    <img class="card-img-top" src="<?=base_url()?>/assets/images/sps/lab.jpg" alt=""
+                    <img class="card-img-top" src="<?=base_url()?>/assets/images/0L9A5702.jpg" alt=""
                         style="height:300px;object-fit:cover;width:100%">
                     <div class="card-body" style="height:auto">
                         <h4 class="card-title">Laboratories</h4>
@@ -83,7 +83,7 @@
             </div>
             <div class="col-md-6">
                 <div class="card text-white bg-primary">
-                    <img class="card-img-top" src="<?=base_url()?>/assets/images/sps/computer.jpg" alt=""
+                    <img class="card-img-top" src="<?=base_url()?>/assets/images/0L9A5585.jpg" alt=""
                         style="height:300px;object-fit:cover;width:100%">
                     <div class="card-body" style="height:auto">
                         <h4 class="card-title">Computer Lab</h4>
@@ -99,4 +99,4 @@
         </div>
     </div>
 </section>
-<?=$this->endSection() ?>
+<?=$this->endSection()?>
