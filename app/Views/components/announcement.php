@@ -28,19 +28,19 @@
                         <div class="latest-posts row">
 
 
-                            <?php if (count($announcements) > 0) : ?>
+                            <?php if (count($announcements) > 0): ?>
 
-                            <?php foreach ($announcements as $announcement) : ?>
+                            <?php foreach ($announcements as $announcement): ?>
                             <article class="post media-post clearfix pb-0 mb-5 col-md-6">
-                                <a href="">
+                                <a href="<?=base_url()?>/announcementDetails/<?=$announcement->id?>">
                                     <img class="post-thumb" src="images/megaphone.jpg" alt="">
                                     <div class="post-right">
-                                        <h5 class="text-white"><?=$announcement->title ?></h5>
-                                        <p class="text-white"><?=dateFormatter($announcement->date) ?></p>
+                                        <h5 class="text-white"><?=$announcement->title?></h5>
+                                        <p class="text-white"><?=dateFormatter($announcement->date)?></p>
                                     </div>
                                 </a>
                             </article>
-                            <?php endforeach; ?>
+                            <?php endforeach;?>
 
 
 
@@ -54,11 +54,11 @@
 
                 </div>
             </div>
-            <?php else : ?>
+            <?php else: ?>
             <div class="col-sm-12 col-md-6">
                 <h3 style="color: #fff;">No Announcements !</h3>
             </div>
-            <?php endif; ?>
+            <?php endif;?>
 
 
         </div>

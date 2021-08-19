@@ -85,6 +85,9 @@ $myRoutes['viewSingleEvent'] = 'Events::viewSingleEvent';
 $myRoutes['deleteEvent'] = 'Events::deleteEvent';
 $myRoutes['updateEvent'] = 'Events::updateEvent';
 
+$myRoutes['announcementDetails/(:num)'] = 'HomePage::announcementDetails/$1';
+$myRoutes['add'] = 'HomePage::add';
+
 $myRoutes['results'] = 'Admin::results';
 
 $routes->map($myRoutes);

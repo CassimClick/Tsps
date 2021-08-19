@@ -30,7 +30,10 @@ class AnnouncementModel extends Model
 
     public function getAllAnnouncements()
     {
-        return $this->dataTable->orderBy('id', 'DESC')->get()->getResult();
+        return $this->dataTable->orderBy('id', 'DESC')
+            ->limit(8)
+            ->get()
+            ->getResult();
     }
     public function singleAnnouncement($id)
     {

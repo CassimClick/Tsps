@@ -44,4 +44,18 @@ class HomePage extends BaseController
         return view('pages/about', $data);
     }
 
+    //=================get a single event Announcement====================
+    public function announcementDetails($id)
+    {
+
+        $data['page'] = [
+            'title' => 'Announcement',
+            'heading' => 'Announcement',
+        ];
+
+        $data['announcement'] = $this->announcementModel->singleAnnouncement($id);
+
+        return view('pages/announcementDetails', $data);
+    }
+
 }
