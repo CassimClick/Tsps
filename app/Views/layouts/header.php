@@ -19,7 +19,7 @@
 
 
     <!-- Page Title -->
-    <title><?=$page['title'] ?></title>
+    <title><?=$page['title']?></title>
 
     <!-- Favicon and Touch Icons -->
     <link href="<?=base_url()?>/assets/images/logo1.png" rel="shortcut icon" type="image/png">
@@ -96,10 +96,9 @@
                         <div class="col-md-7">
                             <div class="widget no-border m-0">
                                 <ul class="list-inline sm-text-center mt-5">
-                                    <li> <i class="fa fa-phone text-theme-colored"></i>+ 255 755 974 257 / + 255 758 965
-                                        704
+                                    <li> <i class="fas fa-phone text-theme-colored"></i>+ 255 755 947 257
                                         </a> </li>
-                                    <li> <i class="far fa-envelope text-theme-colored"></i> <a href="#">
+                                    <li> <i class="fas fa-envelope text-theme-colored"></i> <a href="#">
                                             trustschool1997@yahoo.com</a> </li>
                                 </ul>
                             </div>

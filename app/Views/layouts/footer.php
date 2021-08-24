@@ -51,9 +51,8 @@
                 <div class="widget dark">
                     <h5 class="widget-title line-bottom">Quick Contact</h5>
                     <ul class="list-border">
-                        <li><a href="#">+ 255 755 974 257</a></li>
-                        <li><a href="#">+ 255 758 965
-                                704</a></li>
+                        <li><a href="#">+ 255 755 947 257</a></li>
+                        <!-- <li><a href="#">+ 255 758 965 704</a></li> -->
                         <li><a href="#">trustschool1997@yahoo.com</a></li>
                         <li><a href="#" class="lineheight-20">Sakina Arusha</a>
                         </li>
@@ -69,14 +68,14 @@
         <div class="container pt-20 pb-20">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-center text-white m-0">Trust St Patrick School &copy;<?= date('Y') ?></p>
+                    <p class="text-center text-white m-0">Trust St Patrick School &copy;<?=date('Y')?></p>
                 </div>
 
             </div>
         </div>
     </div>
 </footer>
-<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<a class="scrollToTop" href="#"><i class="fas fa-angle-up"></i></a>
 </div>
 <!-- end wrapper -->
 
@@ -85,8 +84,8 @@
 <script src="<?=base_url()?>/js/custom.js"></script>
 <script src="<?=base_url()?>/js/sweetalert.js"></script>
 
-<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
-      (Load Extensions only on Local File Systems ! 
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+      (Load Extensions only on Local File Systems !
        The following part can be removed on Server for On Demand Loading) -->
 <!-- <script type="text/javascript"
     src="<?=base_url()?>/js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>

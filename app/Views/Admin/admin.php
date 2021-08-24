@@ -1,5 +1,5 @@
-<?=$this->extend('layouts/adminLayout') ?>
-<?=$this->section('content') ?>
+<?=$this->extend('layouts/adminLayout')?>
+<?=$this->section('content')?>
 <div class="container-fluid">
     <br>
     <h3 class="">Admin page</h3>
@@ -27,7 +27,7 @@
 
                 <div class="info-box-content">
                     <span class="info-box-number">Gallery</span>
-                    <span class="">55</span><br>
+                    <span class=""><?=$gallery?></span><br>
 
                 </div>
 
@@ -83,7 +83,7 @@
 
                 <div class="info-box-content">
                     <span class="info-box-number">Joining Instructions</span>
-                    <span class=""><?=$joining ?></span><br>
+                    <span class=""><?=$joining?></span><br>
 
                 </div>
 
@@ -106,4 +106,4 @@
         </div>
     </div>
 </div>
-<?=$this->endSection() ?>
+<?=$this->endSection()?>

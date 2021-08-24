@@ -3,10 +3,11 @@
 use App\Libraries\CommonTasks;
 use App\Models\AnnouncementModel;
 use App\Models\Downloads;
+use App\Models\EventsModel;
 use App\Models\FeedBack;
+use App\Models\GalleryModel;
 use App\Models\JoiningInstruction;
 use App\Models\Results;
-use App\Models\EventsModel;
 
 class Admin extends BaseController
 {
@@ -16,6 +17,7 @@ class Admin extends BaseController
     public $eventModel;
     public $announcementModel;
     public $feedbackModel;
+
     public $session;
 
     public function __construct()
@@ -26,6 +28,7 @@ class Admin extends BaseController
         $this->Downloads = new Downloads();
         $this->results = new Results();
         $this->eventModel = new EventsModel();
+        $this->gallery = new GalleryModel();
 
         $this->session = session();
 
@@ -35,8 +38,8 @@ class Admin extends BaseController
     public function dashBoard()
     {
 
-    if(!$this->session->has('loggedUser')){
-     return redirect()->route('login');
+        if (!$this->session->has('loggedUser')) {
+            return redirect()->route('login');
         }
 
         $data['announcements'] = count($this->announcementModel->getAllAnnouncements());
@@ -45,7 +48,8 @@ class Admin extends BaseController
         $data['results'] = count($this->results->getFiles());
         $data['joining'] = count($this->joiningInstruction->getFiles());
         $data['uploads'] = count($this->Downloads->getFiles());
-        
+        $data['gallery'] = count($this->gallery->getAll());
+
         $data['page'] = [
             'title' => 'Admin Dashboard',
             'heading' => 'Admin Dashboard',
@@ -54,9 +58,9 @@ class Admin extends BaseController
     }
     public function announcements()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         $data['page'] = [
             'title' => 'Announcements',
             'heading' => 'Announcements',
@@ -69,9 +73,9 @@ class Admin extends BaseController
 //=================Publishing new Announcement====================
     public function publishAnnouncement()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         if ($this->request->getMethod() == 'post') {
 
             $announcement = [
@@ -94,9 +98,9 @@ class Admin extends BaseController
     //=================Update existing announcement====================
     public function updateAnnouncement()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         if ($this->request->getMethod() == 'post') {
             $theId = $this->request->getVar('theId');
             $announcement = [
@@ -119,9 +123,9 @@ class Admin extends BaseController
 
     public function viewSingleAnnouncement()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         if ($this->request->getMethod() == 'post') {
             $announcementId = $this->request->getVar('id');
             $result = $this->announcementModel->singleAnnouncement($announcementId);
@@ -132,9 +136,9 @@ class Admin extends BaseController
     }
     public function deleteAnnouncement()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         if ($this->request->getMethod() == 'post') {
             $announcementId = $this->request->getVar('id');
             $result = $this->announcementModel->deleteAnnouncement($announcementId);
@@ -146,9 +150,9 @@ class Admin extends BaseController
 
     public function events()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         $data['page'] = [
             'title' => 'Events',
             'heading' => 'Events',
@@ -159,9 +163,9 @@ class Admin extends BaseController
 
     public function joining()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         $data['page'] = [
             'title' => 'Joining Instruction',
         ];
@@ -169,7 +173,7 @@ class Admin extends BaseController
         if ($this->request->getMethod() == 'post') {
             $file = $this->request->getFile('pdf-file');
 
-            if ($file == '') {
+            if ('' == $file) {
                 $joiningInstructionData = [
                     'name' => $this->request->getVar('name'),
                     'date' => $this->request->getVar('year'),
@@ -209,9 +213,9 @@ class Admin extends BaseController
 
     public function deleteJoiningInstruction()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         if ($this->request->getMethod() == 'post') {
             $fileId = $this->request->getVar('id');
             $result = $this->joiningInstruction->deleteJoining($fileId);
@@ -229,9 +233,9 @@ class Admin extends BaseController
 
     public function sendFeedback()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         if ($this->request->getMethod() == 'post') {
             $data = [
                 'name' => $this->request->getVar('name'),
@@ -249,9 +253,9 @@ class Admin extends BaseController
 
     public function viewFeedback()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         $data['page'] = [
             'title' => 'Feedback',
 
@@ -263,9 +267,9 @@ class Admin extends BaseController
 
     public function deleteFeedback()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         if ($this->request->getMethod() == 'post') {
             $feedbackId = $this->request->getVar('id');
             $request = $this->feedbackModel->deleteFeedback($feedbackId);
@@ -282,9 +286,9 @@ class Admin extends BaseController
 
     public function fileUpload()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         $data['page'] = [
             'title' => 'Files Upload',
         ];
@@ -292,7 +296,7 @@ class Admin extends BaseController
         if ($this->request->getMethod() == 'post') {
             $file = $this->request->getFile('pdf-file');
 
-            if ($file == '') {
+            if ('' == $file) {
                 $document = [
                     'name' => $this->request->getVar('name'),
                     'file' => '',
@@ -330,9 +334,9 @@ class Admin extends BaseController
 
     public function deleteUploadedFile()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         if ($this->request->getMethod() == 'post') {
             $fileId = $this->request->getVar('id');
             $result = $this->Downloads->deleteFile($fileId);
@@ -352,9 +356,9 @@ class Admin extends BaseController
 
     public function publishResult()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         $data['page'] = [
             'title' => 'Academic Results',
         ];
@@ -362,7 +366,7 @@ class Admin extends BaseController
         if ($this->request->getMethod() == 'post') {
             $file = $this->request->getFile('pdf-file');
 
-            if ($file == '') {
+            if ('' == $file) {
                 $document = [
                     'name' => $this->request->getVar('name'),
                     'year' => $this->request->getVar('year'),
@@ -402,9 +406,9 @@ class Admin extends BaseController
 
     public function deleteResult()
     {
-        if(!$this->session->has('loggedUser')){
+        if (!$this->session->has('loggedUser')) {
             return redirect()->route('login');
-               }
+        }
         if ($this->request->getMethod() == 'post') {
             $fileId = $this->request->getVar('id');
             $result = $this->results->deleteResult($fileId);
@@ -419,7 +423,5 @@ class Admin extends BaseController
         }
 
     }
-
-    
 
 }

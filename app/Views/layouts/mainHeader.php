@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><?= $page['title']; ?></title>
+    <title><?=$page['title'];?></title>
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" type="image/x-icon">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -41,7 +41,7 @@
     <!-- light box -->
 
 
-    <!-- 
+    <!--
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
     <script src="admin/dist/js/sweetalert.js"></script>
@@ -82,15 +82,15 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-md dropdown-menu-right mt-2">
 
-                        <div class="dropdown-divider"></div>
-                        <a href="admin/changePassword" class="dropdown-item">
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <!-- <a href="admin/changePassword" class="dropdown-item">
                             <i class="far fa-key mr-2  "></i>Change Password
 
-                        </a>
-                        <div class="dropdown-divider"></div>
+                        </a> -->
+                        <!-- <div class="dropdown-divider"></div> -->
 
 
-                        <div class="dropdown-divider"></div>
+                        <!-- <div class="dropdown-divider"></div> -->
                         <a href="<?=base_url()?>/logout" class="dropdown-item">
                             <i class="far fa-power-off mr-2  "></i>Log Out
                         </a>
