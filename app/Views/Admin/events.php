@@ -1,5 +1,5 @@
-<?=$this->extend('layouts/adminLayout') ?>
-<?=$this->section('content') ?>
+<?=$this->extend('layouts/adminLayout')?>
+<?=$this->section('content')?>
 <div class="container p-10">
     <h3>event page</h3>
     <div class="col-md-12">
@@ -23,26 +23,26 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($events as $event) : ?>
+            <?php foreach ($events as $event): ?>
 
             <tr>
-                <td><?=ucfirst($event->title) ?></td>
-                <td><?= dateFormatter($event->date) ?></td>
-                <td><?=substr($event->description,0,60)?></td>
+                <td><?=ucfirst($event->title)?></td>
+                <td><?=dateFormatter($event->date)?></td>
+                <td><?=substr($event->description, 0, 60)?></td>
                 <td><img style="width: 50px ; height:50px; border-radius:50%; box-shadow: -1px 4px 10px -1px rgba(36,36,36,0.6);"
                         class="event-thumb" src="<?=$event->image_url?>" alt=""></td>
                 <td>
                     <div class="button-group">
                         <button onclick="viewEvent('<?=$event->id?>')" class="btn btn-sm btn-success"><i
-                                class="fal fa-eye"></i></button>
+                                class="fas fa-eye"></i></button>
                         <button onclick="editEvent('<?=$event->id?>')" class="btn btn-sm btn-primary"><i
-                                class="fal fa-edit"></i></button>
+                                class="fas fa-edit"></i></button>
                         <button onclick="deleteEvent('<?=$event->id?>')" class="btn btn-sm btn-danger"><i
-                                class="fal fa-trash-alt"></i></button>
+                                class="fas fa-trash-alt"></i></button>
                     </div>
                 </td>
             </tr>
-            <?php endforeach; ?>
+            <?php endforeach;?>
         </tbody>
         <tfoot>
 
@@ -60,7 +60,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <?= form_open_multipart(base_url('publishEvent')) ?>
+                <?=form_open_multipart(base_url('publishEvent'))?>
                 <form id="eventForm" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="my-input">Tittle</label>
@@ -83,7 +83,7 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Publish</button>
             </div>
-            <?=form_close() ?>
+            <?=form_close()?>
 
         </div>
         <!-- /.modal-content -->
@@ -190,7 +190,7 @@ $('#updateBtn').click(function() {
     function validator(input) {
         if (input.val() == '') {
             input.css('border', '1px solid red')
-            return false
+            return fasse
         } else {
             input.css('border', '1px solid green')
             return true
@@ -251,7 +251,7 @@ $('#eventForm').on('submit', function(e) {
     function validator(input) {
         if (input.val() == '') {
             input.css('border', '1px solid red')
-            return false
+            return fasse
         } else {
             input.css('border', '1px solid green')
             return true
@@ -391,4 +391,4 @@ function deleteEvent(id) {
 
 }
 </script>
-<?=$this->endSection() ?>
+<?=$this->endSection()?>

@@ -31,9 +31,10 @@
                             <?php if (count($announcements) > 0): ?>
 
                             <?php foreach ($announcements as $announcement): ?>
-                            <article class="post media-post clearfix pb-0 mb-5 col-md-6">
+                            <article class="post media-post clearfix pb-0 mb-5 col-md-6 announcement">
+                                <img src="<?=base_url()?>/assets/images/icon/new.png" alt="">
                                 <a href="<?=base_url()?>/announcementDetails/<?=$announcement->id?>">
-                                    <img class="post-thumb" src="images/megaphone.jpg" alt="">
+                                    <!-- <img src="<?=base_url()?>/assets/images/icon/new.png" alt=""> -->
                                     <div class="post-right">
                                         <h5 class="text-white"><?=$announcement->title?></h5>
                                         <p class="text-white"><?=dateFormatter($announcement->date)?></p>
@@ -44,10 +45,10 @@
 
 
 
-                            <article class="post media-post clearfix pb-0 mb-10 col-md-12">
+                            <!-- <article class="post media-post clearfix pb-0 mb-10 col-md-12">
                                 <a class="btn  anc" href="#">View More
                                     Announcements</a>
-                            </article>
+                            </article> -->
 
                         </div>
                     </div>

@@ -24,9 +24,10 @@
                     <h5 class="widget-title line-bottom">Useful Links</h5>
                     <ul class="list angle-double-right list-border">
                         <li><a href="<?=base_url()?>">Home</a></li>
+                        <li><a href="<?=base_url()?>/selfReliance">Self Reliance</a></li>
                         <li><a href="<?=base_url()?>/joiningInstruction">Joining Instruction</a></li>
-                        <li><a href="#">Academic Results</a></li>
-                        <li><a href="#">Informational Center</a></li>
+                        <li><a href="<?=base_url()?>/examinationResults">Academic Results</a></li>
+                        <li><a href="<?=base_url()?>/environment">School Environment</a></li>
                         <li><a href="<?=base_url()?>/sports">Sports Academy</a></li>
                     </ul>
                 </div>
@@ -51,10 +52,11 @@
                 <div class="widget dark">
                     <h5 class="widget-title line-bottom">Quick Contact</h5>
                     <ul class="list-border">
+                        <li><a href="#">+255 758 965 704</a></li>
                         <li><a href="#">+ 255 755 947 257</a></li>
                         <!-- <li><a href="#">+ 255 758 965 704</a></li> -->
                         <li><a href="#">trustschool1997@yahoo.com</a></li>
-                        <li><a href="#" class="lineheight-20">Sakina Arusha</a>
+                        <li><a href="#" class="lineheight-20">P O Box 2500 Arusha</a>
                         </li>
                     </ul>
 

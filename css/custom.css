@@ -57,6 +57,44 @@
   background: #f1f1f1;
 }
 
+.announcement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.announcement img {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  -webkit-transition: 0.4 ease;
+  transition: 0.4 ease;
+  -webkit-animation: blinker 2s step-end infinite;
+          animation: blinker 2s step-end infinite;
+}
+
+.announcement:hover {
+  background: #031524af;
+  color: #f1f1f1;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 .event-thumb {
   width: 80px;
   height: 80px;

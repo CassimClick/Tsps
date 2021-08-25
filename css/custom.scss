@@ -52,12 +52,35 @@
   background: #f1f1f1;
 }
 
-.announcements-container {
-  // background: #10ad52;
-  // overflow-y: scroll;
-  // overflow-x: hidden;
-  // height: 400px;
+.announcement{
+
+  display: flex;
+  // justify-content: center booom;
+  align-items: center;
+
+  img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    transition: 0.4 ease;
+    animation: blinker 2s step-end infinite;
+  }
+
+   transition: 0.4s ease;
+   &:hover{
+     background: #031524af;
+     color: #f1f1f1;
+   }
 }
+
+
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 
 .event-thumb{
    width: 80px; 

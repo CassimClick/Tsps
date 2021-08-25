@@ -33,7 +33,8 @@
                                 </div>
                             </div>
                             <div class="col-md-6 p-30 pl-sm-50">
-                                <h4 class="mt-0 mb-5"><a href="#" class="text-white"><?=$event->title?></a></h4>
+                                <h4 class="mt-0 mb-5"><a href="<?=base_url()?>/singleEvent/<?=$event->id?>"
+                                        class="text-white"><?=$event->title?></a></h4>
                                 <ul class="list-inline mb-5 text-white">
                                     <li class="pr-0"><i
                                             class="fas fa-calendar mr-5"></i><?=dateFormatter($event->date)?>

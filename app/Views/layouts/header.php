@@ -83,7 +83,7 @@
         <!-- preloader -->
         <div id="preloader">
             <div id="spinner">
-                <img alt="" src="images/preloaders/5.gif">
+                <img alt="" src="<?=base_url()?>assets/images/icon/loading2.gif">
             </div>
             <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
         </div>
@@ -96,7 +96,8 @@
                         <div class="col-md-7">
                             <div class="widget no-border m-0">
                                 <ul class="list-inline sm-text-center mt-5">
-                                    <li> <i class="fas fa-phone text-theme-colored"></i>+ 255 755 947 257
+                                    <li> <i class="fas fa-phone text-theme-colored"></i> +255 758 965 704 / + 255 755
+                                        947 257
                                         </a> </li>
                                     <li> <i class="fas fa-envelope text-theme-colored"></i> <a href="#">
                                             trustschool1997@yahoo.com</a> </li>
@@ -107,9 +108,11 @@
                             <div class="widget no-border m-0">
                                 <ul
                                     class="styled-icons icon-circled icon-dark icon-theme-colored icon-sm pull-right flip sm-pull-none sm-text-center">
-                                    <li><a href="#"><i class="fab fa-facebook text-white"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter text-white"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram text-white"></i></a></li>
+                                    <li><a target="_blank" href="https://web.facebook.com/TrustStPatrickSchools/?_rdc=1&_rdr
+"><i class="fab fa-facebook text-white"></i></a></li>
+                                    <!-- <li><a href="#"><i class="fab fa-twitter text-white"></i></a></li> -->
+                                    <li><a target="_blank" href="https://www.instagram.com/truststpatrickschools/?hl=en
+"><i class="fab fa-instagram text-white"></i></a></li>
                                     <!-- <li><a href="#"><i class="fa fa-google-plus text-white"></i></a></li>
                                     <li><a href="#"><i class="fa fa-linkedin text-white"></i></a></li> -->
                                 </ul>
