@@ -1,5 +1,5 @@
 <section id="home" class="divider">
-    <div class="owl-carousel-1col" data-nav="true" id="mySlider">
+    <div class="owl-carousel-1col" data-nav="true" id="mySlider" style="max-height: 65vh;">
         <?=renderImage('0L9A3985.jpg')?>
         <?=renderImage('0L9A5708.jpg')?>
         <?=renderImage('0L9A5548.jpg')?>

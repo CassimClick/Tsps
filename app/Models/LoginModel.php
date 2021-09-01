@@ -27,7 +27,27 @@ class LoginModel extends Model
         }
     }
 
-    public function checkAdmin(){
-        return $this->dataTable->select()->get()->getResult();  
+    public function checkAdmin()
+    {
+        return $this->dataTable->select()->get()->getResult();
+    }
+
+    public function getLoggedUserData($id)
+    {
+        return $this->dataTable
+            ->select()
+            ->where('unique_id', $id)
+            ->get()
+            ->getRow();
+
+    }
+
+    public function updatePassword($id, $password)
+    {
+
+        return $this->dataTable
+            ->where(['unique_id' => $id])
+            ->set(['password' => $password])
+            ->update();
     }
 }

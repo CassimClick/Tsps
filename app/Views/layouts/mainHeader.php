@@ -83,16 +83,18 @@
                     <div class="dropdown-menu dropdown-menu-md dropdown-menu-right mt-2">
 
                         <!-- <div class="dropdown-divider"></div> -->
-                        <!-- <a href="admin/changePassword" class="dropdown-item">
-                            <i class="far fa-key mr-2  "></i>Change Password
+                        <a href="<?=base_url()?>/changePassword" class="dropdown-item">
+                            <i class="fas fa-key mr-2  "></i>Change Password
 
-                        </a> -->
-                        <!-- <div class="dropdown-divider"></div> -->
-
-
-                        <!-- <div class="dropdown-divider"></div> -->
+                        </a>
+                        <!-- <div class="dropdown-divider"></div>
                         <a href="<?=base_url()?>/logout" class="dropdown-item">
-                            <i class="far fa-power-off mr-2  "></i>Log Out
+                            <i class="fas fa-user-plus mr-2  "></i>Add Account
+                        </a> -->
+
+                        <div class="dropdown-divider"></div>
+                        <a href="<?=base_url()?>/logout" class="dropdown-item">
+                            <i class="fas fa-power-off mr-2  "></i>Log Out
                         </a>
 
 

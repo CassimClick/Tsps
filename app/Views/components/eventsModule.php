@@ -11,6 +11,8 @@
         <div class="section-content">
             <div class="row">
 
+                <?php $currentDate = date("Y-m-d");?>
+
                 <?php if (count($events) > 0): ?>
 
                 <?php foreach ($events as $event): ?>
@@ -20,6 +22,8 @@
                     data-wow-delay="0.5s">
                     <div class=" table-horizontal  maxwidth400 eventCard"
                         style="box-shadow: -1px 4px 10px -1px rgba(36,36,36,0.4);">
+
+                        <?php if ($event->date > $currentDate): ?>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="thumb">
@@ -46,6 +50,11 @@
                                     href="<?=base_url()?>/singleEvent/<?=$event->id?>">Read More →</a>
                             </div>
                         </div>
+                        <?php else: ?>
+                        <?php endif;?>
+
+
+
 
                     </div>
                 </div>

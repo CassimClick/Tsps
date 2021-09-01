@@ -50,6 +50,8 @@ $myRoutes['gallery'] = 'Pages::gallery';
 //=================Admin====================
 $myRoutes['login'] = 'Auth::login';
 $myRoutes['logout'] = 'Auth::logout';
+$myRoutes['addUser'] = 'Auth::addUser';
+$myRoutes['changePassword'] = 'Auth::changePassword';
 // $myRoutes['logUser'] = 'Auth::logUser';
 $myRoutes['BigMan2000'] = 'Auth::register';
 $myRoutes['registerUser'] = 'Auth::registerUser';
@@ -89,6 +91,7 @@ $myRoutes['announcementDetails/(:num)'] = 'HomePage::announcementDetails/$1';
 $myRoutes['add'] = 'HomePage::add';
 
 $myRoutes['results'] = 'Admin::results';
+$myRoutes['test'] = 'Test::index';
 
 $routes->map($myRoutes);
 

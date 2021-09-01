@@ -71,6 +71,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <p class="text-center text-white m-0">Trust St Patrick School &copy;<?=date('Y')?></p>
+                    <div class="text-center text-white m-2">Developed By <a target="_blank" href="https://github.com/CassimClick
+">Cassim Mushi</a></div>
                 </div>
 
             </div>

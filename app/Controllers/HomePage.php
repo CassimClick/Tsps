@@ -20,6 +20,8 @@ class HomePage extends BaseController
             'title' => 'Trust St Patrick School',
         ];
 
+        // $data['currentDate'] = date("Y-m-d");
+
         $data['announcements'] = $this->announcementModel->getAllAnnouncements();
         $data['events'] = $this->eventsModal->getSixEvents();
         return view('pages/index', $data);

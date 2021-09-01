@@ -75,11 +75,9 @@ $pageSession = \CodeIgniter\Config\Services::session();
                             <!-- <a href="#" style="float:right;font-size:12px;">Forgot password?</a> -->
                             <input type="password" class="form-control form-control-sm" name="password" required min(5)>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
 
-                        <div class="sign-up">
-                            Do you have an account? <a href="<?=base_url()?>/login">Login</a>
-                        </div>
+
                     </form>
                 </div>
             </div>

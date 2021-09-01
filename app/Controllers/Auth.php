@@ -21,10 +21,9 @@ class Auth extends BaseController
         helper(['form', 'url', 'array', 'date', 'regions']);
     }
 
-  
     public function register()
     {
-      
+
         $data['page'] = [
             'title' => 'Resister Account',
         ];
@@ -37,7 +36,6 @@ class Auth extends BaseController
         $data = [];
         $data['validation'] = null;
 
-        
         $data['page'] = [
             'title' => 'Login',
         ];
@@ -58,9 +56,9 @@ class Auth extends BaseController
 
                 if ($userData) {
                     if (password_verify($password, $userData->password)) {
-                        $this->session->set('loggedUser',$userData->unique_id);
+                        $this->session->set('loggedUser', $userData->unique_id);
                         return redirect()->route('dashBoard');
-                      
+
                     } else {
                         $this->session->setFlashdata('error', 'Wrong password entered for the email');
                         return redirect()->to('login');
@@ -73,7 +71,7 @@ class Auth extends BaseController
                 $data['validation'] = $this->validator;
             }
         }
-        return view('Admin/loginPage',$data);
+        return view('Admin/loginPage', $data);
 
         //TODO:fix the sign up page
     }
@@ -81,7 +79,6 @@ class Auth extends BaseController
     {
 
         if ($this->request->getMethod() == 'post') {
-        
 
             $uniqueId = md5(str_shuffle('abcdefghijklmnopqrstuvwxyz' . time()));
             $userData = [
@@ -107,13 +104,75 @@ class Auth extends BaseController
 
     }
 
-    
+    public function addUser()
+    {
+        $data['page'] = [
+            'title' => 'Add User',
+        ];
+
+        return view('Admin/addUser', $data);
+
+    }
+
+    public function changePassword()
+    {
+        if (!$this->session->has('loggedUser')) {
+            return redirect()->route('login');
+        }
+
+        $session = session();
+        $data = [];
+        $data['validation'] = null;
+        $data['page'] = [
+            'title' => 'Change Password',
+            'heading' => 'Change Password',
+        ];
+        $uniqueId = $session->get('loggedUser');
+
+        $data['profile'] = $this->loginModel->getLoggedUserData($uniqueId);
+        // if ($role == 1) {
+        // } elseif ($role == 2) {
+        //     $data['profile'] = $this->profileModel->getLoggedUserData($uniqueId);
+        // }
+
+        if ($this->request->getMethod() == 'post') {
+            $rules = [
+
+                'oldPassword' => 'required|min_length[6]|max_length[15]',
+                'newPassword' => 'required|min_length[6]|max_length[15]',
+                'confirmNewPassword' => 'required|matches[newPassword]',
+            ];
+
+            if ($this->validate($rules)) {
+                $oldPassword = $this->request->getVar('oldPassword');
+                $confirmNewPassword = password_hash($this->request->getVar('confirmNewPassword'), PASSWORD_DEFAULT);
+
+                if (password_verify($oldPassword, $data['profile']->password)) {
+                    $request = $this->loginModel->updatePassword($uniqueId, $confirmNewPassword);
+
+                    if ($request) {
+
+                        $this->session->setFlashData('Success', 'Password Changed Successfully');
+                        return redirect()->to('changePassword');
+
+                    }
+                } else {
+                    $this->session->setFlashData('error', 'Invalid Old Password'); //
+                }
+                // exit;
+            } else {
+                $data['validation'] = $this->validator;
+            }
+        }
+        return view('Admin/changePassword', $data);
+    }
+
     public function logout()
     {
-            $this->session->remove('loggedUser');
-            $this->session->remove('role');
-            $this->session->destroy();
-            return redirect()->to(\base_url().'/login');
+        $this->session->remove('loggedUser');
+        $this->session->remove('role');
+        $this->session->destroy();
+        return redirect()->to(\base_url() . '/login');
     }
 
 }
